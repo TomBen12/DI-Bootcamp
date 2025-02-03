@@ -1,0 +1,13 @@
+define the following value types
+
+strings: a string is essentialy a collection of characters
+strings are immutable but can be converted to list for manipulation purposes. we write them with qu
+
+integers: integers are whole numbers.
+in python, you can perfom mathematical operation with them
+
+floats: they are floating point numbers
+they act the same as integers
+
+booleans: they can be either True or False . True values equal 1 and false 0.
+
