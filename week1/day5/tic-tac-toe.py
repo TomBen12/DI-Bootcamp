@@ -23,6 +23,10 @@ if taken print message and call player input method again if not it will place a
 
 
 """
+board = [[1,2,3],
+         [4,5,6],
+         [7,8,9]]
+
 def check_who_turn(board_turn):
      #if False player 1 turn / if True player 2 turn
      if board_turn %2 == 0:
@@ -34,10 +38,7 @@ def check_who_turn(board_turn):
 #     player_position = input("please enter a position to")
 
 
-def display_board():
-    board = [[1,2,3],
-             [4,5,6],
-             [7,8,9]]
+def display_board(board):
     
     board_turn = 1
     player_spot = 0
@@ -63,8 +64,13 @@ def display_board():
 
 
 
-
 display_board()
+
+
+
+
+
+
 def check_who_turn(board_turn):
     # If False → Player 1's turn, If True → Player 2's turn
     return board_turn % 2 != 0  # Player 2 plays on odd turns

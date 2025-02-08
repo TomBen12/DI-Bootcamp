@@ -248,7 +248,7 @@ def ask_question(data):
         else:right_ans_list.append(usr_ans)
     print("---Quizz End---")
     return wrong_ans_list, right_ans_list, true_ans_list
-#for some reason ifaswers are wrong it repeats only once I dontknow why ...
+#for some reason if aswers are wrong it repeats only once I dontknow why ...
 #2 #3 #bonus
 def quizz_report(wrong, right, true):
     print("----Quizz Report---")

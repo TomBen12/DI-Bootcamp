@@ -8,15 +8,15 @@ d Create a set called friend_fav_numbers with your friend's favorites numbers.
 e Concatenate my_fav_numbers and friend_fav_numbers to a new variable called our_fav_numbers.
 """
 
-# #a & b
+# #1 & 2
 # my_fav_numbers = {2, 7, 1, 14, 21}
-# my_fav_numbers.add(6)
-# my_fav_numbers.add(9)
-# # #alternative with update method
-# # my_fav_numbers.update([6,9])
+# # my_fav_numbers.add(6)
+# # my_fav_numbers.add(9)
+# # #alternative with update method to add more than one
+# my_fav_numbers.update([9,6]) #update can add iterable only like lists etc...
 # print(my_fav_numbers)
 
-# #c
+# # #3
 # my_fav_numbers_list = list(my_fav_numbers)
 # my_fav_numbers_list.pop()
 # no_last_my_fav_num = set(my_fav_numbers_list)
@@ -46,29 +46,30 @@ Exercise 3: List
 Instructions
 Using this list basket = ["Banana", "Apples", "Oranges", "Blueberries"];
 
-a. Remove “Banana” from the list.
-b. Remove “Blueberries” from the list.
-c. Add “Kiwi” to the end of the list.
-d. Add “Apples” to the beginning of the list.
-e. Count how many apples are in the basket.
-f. Empty the basket.
-g. Print(basket)
+1. Remove “Banana” from the list.
+2. Remove “Blueberries” from the list.
+3. Add “Kiwi” to the end of the list.
+4. Add “Apples” to the beginning of the list.
+5. Count how many apples are in the basket.
+6. Empty the basket.
+7. Print(basket)
 """
 # basket = ["Banana", "Apples", "Oranges", "Blueberries"]
-# #a
+# #1
 # basket.remove("Banana")
-# #b
-# basket.pop(-1) #other way of removing
-# #c
+# #2
+# basket.pop()
+# #3
 # basket.append("Kiwi")
-# #d
+# print(basket)
+# #4
 # basket.insert(0,"Apples")
-# #e
+# #5
 # apple_count = basket.count("Apples")
 # print(apple_count)
-# #f
+# #6
 # basket.clear()
-# #g
+# #7
 # print(basket)
 
 
@@ -232,26 +233,26 @@ c. After all the sandwiches have been made, print a message listing each sandwic
 
 """
 #a.
-sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+# sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
 
-pastrami = "Pastrami sandwich"
-while "Pastrami sandwich" in sandwich_orders:
-    sandwich_orders.remove(pastrami)
-# print(sandwich_orders)
+# pastrami = "Pastrami sandwich"
+# while "Pastrami sandwich" in sandwich_orders:
+#     sandwich_orders.remove(pastrami)
+# # print(sandwich_orders)
 
-#b.
-finished_sandwiches = []
-copy_sandwich_orders = sandwich_orders.copy()
+# #b.
+# finished_sandwiches = []
+# copy_sandwich_orders = sandwich_orders.copy()
 
-while sandwich_orders:
-    for sw in copy_sandwich_orders:
-        finished_sandwiches.append(sw)
-        sandwich_orders.pop() ### how does this work?
+# while sandwich_orders:
+#     for sw in copy_sandwich_orders:
+#         finished_sandwiches.append(sw)
+#         sandwich_orders.pop() ### how does this work?
         
-# print(sandwich_orders)
-# print(finished_sandwiches)
+# # print(sandwich_orders)
+# # print(finished_sandwiches)
 
-for sw in finished_sandwiches:
-    print(f"I made your {sw} ! ")
+# for sw in finished_sandwiches:
+#     print(f"I made your {sw} ! ")
 
 
