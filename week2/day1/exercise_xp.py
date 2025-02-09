@@ -124,53 +124,48 @@ x.add_animal(Giraffe)"""
 
 
 #1
-class Zoo: #2
-    def __init__(self, zoo_name):
-        self.name = zoo_name
-        self.animals = []
-#3
-    def add_animal(self, new_animal):
-        if new_animal not in self.animals:
-            self.animals.append(new_animal)
+# class Zoo: #2
+#     def __init__(self, zoo_name):
+#         self.name = zoo_name
+#         self.animals = []
+# #3
+#     def add_animal(self, new_animal):
+#         if new_animal not in self.animals:
+#             self.animals.append(new_animal)
             
-    #4
-    def get_animals(self):
-        print(", ".join(self.animals))
+#     #4
+#     def get_animals(self):
+#         print(", ".join(self.animals))
         
-    #5
-    def sell_animal(self, animal_sold): #😿
-        if animal_sold in self.animals:
-            self.animals.remove(animal_sold)
+#     #5
+#     def sell_animal(self, animal_sold): #😿
+#         if animal_sold in self.animals:
+#             self.animals.remove(animal_sold)
             
-    #6
-    def sort_animals(self):
-        self.animals.sort()
-        sorted_animals = {}
-        for animal in self.animals:
-            first_letter = animal[0]
-            if first_letter not in sorted_animals:
-                    sorted_animals[first_letter] = [animal]
-            else:
-                sorted_animals[first_letter].append(animal)
-        return sorted_animals
+#     #6
+#     def sort_animals(self):
+#         self.animals.sort()
+#         sorted_animals = {}
+#         for animal in self.animals:
+#             first_letter = animal[0]
+#             if first_letter not in sorted_animals:
+#                     sorted_animals[first_letter] = [animal]
+#             else:
+#                 sorted_animals[first_letter].append(animal)
+#         return sorted_animals
     
-my_safari = Zoo("ramat_gan_safari")
-my_safari.add_animal("zebra")
-my_safari.add_animal("baboon")
-my_safari.add_animal("tiger")
-my_safari.add_animal("giraffe")
-my_safari.add_animal("tarantula")
-my_safari.add_animal("chokobo")
-my_safari.add_animal("cactuar")
-my_safari.sort_animals()
-my_safari.sell_animal("giraffe")
-my_safari.get_animals()
-print(my_safari.sort_animals())
-
-
-                
-                
-            
+# my_safari = Zoo("ramat_gan_safari")
+# my_safari.add_animal("zebra")
+# my_safari.add_animal("baboon")
+# my_safari.add_animal("tiger")
+# my_safari.add_animal("giraffe")
+# my_safari.add_animal("tarantula")
+# my_safari.add_animal("chokobo")
+# my_safari.add_animal("cactuar")
+# my_safari.sort_animals()
+# my_safari.sell_animal("giraffe")
+# my_safari.get_animals()
+# print(my_safari.sort_animals())
             
         
         
