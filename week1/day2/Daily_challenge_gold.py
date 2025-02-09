@@ -14,21 +14,6 @@ The number of candles on the cake should be the last number of the users age, if
 
 Bonus : If they were born on a leap year, display two cakes !
 """
-from datetime import datetime
 
-def validate_date(date_str):
-    try:
-        # Try parsing the date with the expected format
-        valid_date = datetime.strptime(date_str, "%d/%m/%Y")
-        return True  # Valid date format
-    except ValueError:
-        return False  # Invalid date format
-    
-user_date = input("Enter a date (DD/MM/YYYY): ")
-
-if validate_date(user_date):
-    print("The date is in the correct format!")
-else:
-    print("Invalid date format! Please use DD/MM/YYYY.")
 
 # for elem in split_birthday_list:
