@@ -59,7 +59,7 @@ class Farm:
             print(f"{key} : {val}")
         print("\n\tE-I-E-A-O!!!!🐮")
         
-    def get_animal_types(self):
+    def get_animal_types(self):   #sets = no duplicates
         animal_types = sorted(list(set(self.animals)))
         return animal_types
         
@@ -69,10 +69,10 @@ class Farm:
         for i, animal in enumerate(anima_list):
             if self.animals.count(animal) > 1:
                 anima_list[i] = animal + "s"
-            if (self.animals.count(animal) > 1) and (len(anima_list) == i + 1): #I want the one before the last
-                anima_list[i] = " and " + animal + "s"
+            if (self.animals.count(animal) > 1) and (len(anima_list) == i + 1): 
+                anima_list[i] = "and " + animal + "s"
                 
-        print(f'{self.name}\'s farm has {",".join(anima_list)}')
+        print(f'{self.name}\'s farm has {", ".join(anima_list)}')
         
             
 my_farm = Farm("McDonald")

@@ -166,10 +166,6 @@ x.add_animal(Giraffe)"""
 # my_safari.sell_animal("giraffe")
 # my_safari.get_animals()
 # print(my_safari.sort_animals())
-            
-        
-        
-    
     
     
         
