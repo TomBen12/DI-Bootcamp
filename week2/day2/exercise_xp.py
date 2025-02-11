@@ -170,7 +170,6 @@ family_1.born(name = "steve", age = 0)
 print(family_1.members)
 print(family_1.is_18("steve"))
 family_1.family_presentation()
-
 """Exercise 5 : TheIncredibles Family
 Instructions
 1.Create a class called TheIncredibles. This class should inherit from the Family class:
@@ -201,14 +200,14 @@ Use the born method inherited from the Family class to add Baby Jack with the fo
 
 Call the incredible_presentation method again."""
 
-class Theincredible(Family):
-    def __init__(self, last_name:str):
-        super().__init__(last_name)
+# class Theincredible(Family):
+#     def __init__(self, last_name:str):
+#         super().__init__(last_name)
 
-    def use_power(self, name: str):
-        for member in self.members:
-            if member["name"] == name:
-                try:
-                    if member["is_child"] == True:
+#     def use_power(self, name: str):
+#         for member in self.members:
+#             if member["name"] == name:
+#                 try:
+#                     if member["is_child"] == True:
 
                 ###did Not Finnish ######will complete durring weeken
