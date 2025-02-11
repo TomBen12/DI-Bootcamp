@@ -119,7 +119,23 @@ Instructions
 3. Loop through the words list and print the index of the first appearence of the letter variable in each word of the list.
 4. If the letter doesn't exist in one of the words, print a friendly message with the word and the letter.
 """
+
+
 word_list = [input(f'please enter word {i}: ') for i in range(1,8)]
-word1, word2, word3, word4, word5, word6, word7 = word_list
-print(word1, word2, word3, word4, word5, word6, word7)
+# word_list = [input(f'please enter word {i}: ') for i in range(1,3)] TEST##
+letter = input("Please enter a single character: ")
+
+for word in word_list:
+    if letter in word:
+        print(f"the letter {letter} is first found in the index {word.index(letter)} of the word {word}") 
+    else:
+        print(f"the letter {letter} does't exist in {word}")
+
+"""
+Exercise 7: Min, Max, Sum
+Instructions
+ Create a list of numbers from one to one million and then use min() and max() to make sure your list actually starts at one and ends at one million. Use the sum() function to see how quickly Python can add a million numbers.
+"""
+
+##    need to finish
 
