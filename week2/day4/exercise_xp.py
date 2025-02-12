@@ -66,7 +66,7 @@ try:
     with open('json_ex.json', 'w') as json_file:
         json.dump(sample, json_file, indent= 4 ,sort_keys=True)
 except Exception() as e:
-    print("something bad happened 🅧")
+    print("something bad happened 🅧 ")
 
         
 
