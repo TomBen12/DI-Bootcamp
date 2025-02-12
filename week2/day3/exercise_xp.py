@@ -140,17 +140,17 @@ import datetime
 # current_date()
 
 #ex 5
-# def new_year_countdown():
-#     now = datetime.datetime.now()
-#     next_year = now.year + 1
-#     new_year = datetime.datetime(next_year, 1, 1)
-#     time_left = new_year - now
-#     days = time_left.days
-#     hours, remainder = divmod(time_left.seconds, 3600) 
-#     minutes, seconds = divmod(remainder, 60)
-#     return f"The {new_year} is in {days} days and {hours} hours, {minutes} min and {seconds} sec"
-##The divmod() function returns both the quotient(result) and remainder when dividing two numbers!! returns a tuple :self reminder:.
-# print(new_year_countdown())
+def new_year_countdown():
+    now = datetime.datetime.now()
+    next_year = now.year + 1
+    new_year = datetime.datetime(next_year, 1, 1)
+    time_left = new_year - now
+    days = time_left.days
+    hours, remainder = divmod(time_left.seconds, 3600) 
+    minutes, seconds = divmod(remainder, 60)
+    return f"The {new_year} is in {days} days and {hours} hours, {minutes} min and {seconds} sec"
+#The divmod() function returns both the quotient(result) and remainder when dividing two numbers!! returns a tuple :self reminder:.
+print(new_year_countdown())
 
 
 #ex 6
@@ -167,7 +167,6 @@ import datetime
 #     #(only substract!!) on date objcts uhh.
 #     minutes_lived = time_diff.total_seconds() / 60 #to get minutes
 #     print(f"You are {minutes_lived} minutes old!👴")
-
 # feel_old()
 #ex7
 ####to be finnished
