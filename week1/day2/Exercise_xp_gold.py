@@ -121,15 +121,15 @@ Instructions
 """
 
 
-word_list = [input(f'please enter word {i}: ') for i in range(1,8)]
-# word_list = [input(f'please enter word {i}: ') for i in range(1,3)] TEST##
-letter = input("Please enter a single character: ")
+# word_list = [input(f'please enter word {i}: ') for i in range(1,8)]
+# # word_list = [input(f'please enter word {i}: ') for i in range(1,3)] TEST##
+# letter = input("Please enter a single character: ")
 
-for word in word_list:
-    if letter in word:
-        print(f"the letter {letter} is first found in the index {word.index(letter)} of the word {word}") 
-    else:
-        print(f"the letter {letter} does't exist in {word}")
+# for word in word_list:
+#     if letter in word:
+#         print(f"the letter: '{letter}' is first found in the index: {word.index(letter)} of the word: '{word}'") 
+#     else:
+#         print(f"the letter {letter} does't exist in {word}")
 
 """
 Exercise 7: Min, Max, Sum

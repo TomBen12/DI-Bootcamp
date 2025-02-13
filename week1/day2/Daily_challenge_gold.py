@@ -1,4 +1,3 @@
-
 """
 Ask the user for their birthdate (specify the format, for example: DD/MM/YYYY).
 Display a little cake as seen below:
@@ -15,5 +14,6 @@ The number of candles on the cake should be the last number of the users age, if
 Bonus : If they were born on a leap year, display two cakes !
 """
 
-
-# for elem in split_birthday_list:
+b_day_str = input("enter your birth date in a dd/mm/yyyy format: ").split("/")
+print(b_day_str)
+y,m,

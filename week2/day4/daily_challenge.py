@@ -5,7 +5,6 @@ class Text:
     def __init__(self, text:str):
         self.text = text
         
-
     def text_frequency(self,):
         word_list = self.text.lower().split()
         counter = 0
