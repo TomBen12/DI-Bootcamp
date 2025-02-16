@@ -45,7 +45,6 @@ should have a method called deal which deals a single card from the deck. After 
 # 2
 import random
 
-
 class Card:
     def __init__(self, suit: str, value: str):
         self.suit = suit

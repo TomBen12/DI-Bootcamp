@@ -1,5 +1,6 @@
 from anagram_checker import Anagram as anacheck
 
+
 def check_word():
     user_input = input("Please, enter a word (no spaces! or weird signs):  ").strip()
     if user_input.isalpha():
@@ -12,6 +13,7 @@ def check_word():
     else:
         print("ERROR ONLY ALPHANUMERIC!")
 
+
 def main():
     flag = True
 
@@ -20,7 +22,9 @@ def main():
         if usr_word != None:
             flag = False
     else:
-        choice = input("would you like to check anagrams?\n type y for yes or anything else for no  ")
+        choice = input(
+            "would you like to check anagrams?\n type y for yes or anything else for no  "
+        )
         if choice == "y":
             anagram = anacheck()
             anagram_list = anagram.get_anagrams(usr_word)
@@ -32,5 +36,6 @@ def main():
                 main()
         else:
             print("bye bye!")
+
 
 main()
