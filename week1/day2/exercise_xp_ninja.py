@@ -204,8 +204,9 @@ The largest number.
 
 # this_string = "New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3."
 
-that_string = input('enter words: ')
+that_string = input('enter words separated by space: ')
 this_list = sorted(that_string.split(' '))
 unique_words = sorted(set(this_list))
 for word in unique_words:
     print(f"{word}:{this_list.count(word)}")
+##just learned that there is a 're' module which contains fuctions to format strings ... will look into that.
