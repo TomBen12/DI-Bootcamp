@@ -91,11 +91,11 @@
 -- and the date of payment ordered by the id of the staff 
 -- member who sold them the dvd.
 
-SELECT customer.customer_id, customer.first_name,
-customer.last_name, payment.amount, payment.payment_date
-FROM customer
-JOIN payment
-ON customer.customer_id = payment.customer_id
+-- SELECT customer.customer_id, customer.first_name,
+-- customer.last_name, payment.amount, payment.payment_date
+-- FROM customer
+-- JOIN payment
+-- ON customer.customer_id = payment.customer_id
 
 
 
