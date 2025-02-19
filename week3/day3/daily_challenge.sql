@@ -39,7 +39,7 @@
 -- LEFT JOIN customer_profile cp
 -- ON c.customer_id = cp.customer_id
 
--- SELECT c.first_name
+-- SELECT COUNT(c.first_name)
 -- FROM customer c
 -- JOIN customer_profile cp
 -- ON c.customer_id = cp.customer_id
@@ -113,20 +113,16 @@
 -- JOIN student s ON l.student_fk_id = s.student_id
 -- JOIN book b ON b.book_id = l.book_fk_id
 
--- SELECT s.student_name, AVG(s.age)
+-- SELECT AVG(s.age)
 -- FROM library l
 -- JOIN student s ON l.student_fk_id = s.student_id
 -- JOIN book b ON b.book_id = l.book_fk_id
--- WHERE b.title = 'Alice in Wonderland'
--- GROUP BY s.student_name  HAVING TROUBLE WITH THIS ONE :(
+-- WHERE b.title = 'Alice In Wonderland'
 
-
-
-
-
-
-
-
-
-
+-- DELETE FROM student WHERE student.name = 'Patrick';
+-- SELECT * FROM library
+-- DELETE FROM student WHERE student.name = 'Bob';
+-- SELECT * FROM library
+----if we delete a child aparent that has a child with fk constrain on DELETE, it will be respected
+----and on deleting the parent related row the child(rens) row will also be deleted!
 
