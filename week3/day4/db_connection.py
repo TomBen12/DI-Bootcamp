@@ -5,7 +5,7 @@ import random
 
 
 connection = psycopg2.connect(
-    database='countries', user='tom', password='\\\\', host='localhost', port='5432'
+    database='countries', user='tom', password=r'\\\\', host='localhost', port='5432'
 )
 
 cursor = connection.cursor()

@@ -1,5 +1,11 @@
 import psycopg2
 
+# Use @staticmethod for utility functions that don’t depend on instance or class variables.
+
+# Use @classmethod when you need to work with cls and allow future subclass modifications.
+
+## separating code into smaller componnent make code more clear and easy to read.
+
 
 class MenuItem:
 
@@ -7,13 +13,13 @@ class MenuItem:
     def connect_db():
         return psycopg2.connect(
             database='restaurant',
-            user='tom',
+            user='tom',  ####connection string/parameter
             password='\\\\',
             host='localhost',
             port='5432',
         )
 
-    def __init__(self, name, price):
+    def __init__(self, name, price=0):
         self.item_name = name
         self.item_price = price
 
@@ -21,11 +27,14 @@ class MenuItem:
         connection = self.connect_db()
         cursor = connection.cursor()
         query = "INSERT INTO Menu_Items (item_name, item_price) VALUES (%s, %s)"
+        # using %s is Psycopg2 and some other Python database adapters.
+        # Prevent sql injections
+        # INSERT INTO Menu_Items (item_name, item_price) VALUES ('Pizza'); DROP TABLE Menu_Items; --', 12.99)
+
         cursor.execute(query, (self.item_name, self.item_price))
         connection.commit()
         cursor.close()
         connection.close()
-        print(f" '{self.item_name}' was added to the menu.")
 
     def delete(self):
 
@@ -36,7 +45,6 @@ class MenuItem:
         connection.commit()
         cursor.close()
         connection.close()
-        print(f" '{self.item_name}' was removed from the menu.")
 
     def update(self, new_name, new_price):
         connection = self.connect_db()
@@ -50,9 +58,6 @@ class MenuItem:
         connection.close()
         self.item_name = new_name
         self.item_price = new_price
-        print(
-            f" '{self.item_name}' was updated to '{new_name}' with price {new_price}."
-        )
 
 
 class MenuManager:
