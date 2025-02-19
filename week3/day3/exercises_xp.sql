@@ -110,16 +110,16 @@
 -- AND c.last_name = 'Mahan'
 -- AND r.return_date BETWEEN '2005-07-28' AND '2005-09-01'
 ----4----
-SELECT f.title
-FROM rental r
-JOIN inventory i ON r.inventory_id = i.inventory_id
-JOIN film f ON i.film_id = f.film_id
-JOIN customer c ON r.customer_id = c.customer_id
-WHERE c.first_name = 'Matthew'
-AND c.last_name = 'Mahan'
-AND f.description ILIKE '%boat%'
-ORDER BY f.replacement_cost DESC
-LIMIT 1
+-- SELECT f.title
+-- FROM rental r
+-- JOIN inventory i ON r.inventory_id = i.inventory_id
+-- JOIN film f ON i.film_id = f.film_id
+-- JOIN customer c ON r.customer_id = c.customer_id
+-- WHERE c.first_name = 'Matthew'
+-- AND c.last_name = 'Mahan'
+-- AND f.description ILIKE '%boat%'
+-- ORDER BY f.replacement_cost DESC
+-- LIMIT 1
 
 
 
