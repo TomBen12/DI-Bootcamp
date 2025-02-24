@@ -1,1 +1,0 @@
-lag_code = data[index]['flag']
