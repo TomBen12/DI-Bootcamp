@@ -11,18 +11,36 @@
 // 5.If the word “bad” does not come after “not” or the words are not in the sentence, console.log the original sentence.
 
 //1
-let sentence = "this is not too bad";
-
+let sentence = "This dinner is not that bad ! You cook well";
+console.log(sentence);
 //2
-let words = sentence.split(" ");
-let wordNot = words[words.indexOf("not")];
+
+let wordNot = sentence.indexOf("not");
 console.log(wordNot);
-
 //3
-let wordBad = words[words.indexOf("bad")];
-
+let wordBad = sentence.indexOf("bad");
 console.log(wordBad);
+//4 //5
+if (wordBad > wordNot) {
+  sentence = sentence.slice(0, wordNot) + "good" + sentence.slice(wordBad + 3);
+  console.log(sentence);
+} else console.log(sentence);
 
-//4
-if (words.indexOf(wordNot) < words.indexOf(wordBad)) {
+///DAILY CHALLENGE 2
+// Write a JavaScript program that recreates the pattern below.
+// Do this challenge twice: first by using one loop, then by using two nested for loops (Nested means one inside the other - check out this tutorial of nested loops).
+// Do this Daily Challenge by yourself, without looking at the answers on the interne
+let star = "";
+for (let i = 1; i <= 6; i++) {
+  star += " * ";
+  console.log(star);
+}
+
+let rows = 6;
+for (i = 1; i <= rows; i++) {
+  let star = "";
+  for (j = 1; j <= i; j++) {
+    star += " * ";
+  }
+  console.log(star);
 }
