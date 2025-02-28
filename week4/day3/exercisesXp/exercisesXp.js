@@ -1,83 +1,169 @@
+//Exercise 1
+// function displayNumberVisible() {
+//   let num = 0;
+//   for (let i = 0; i < 500; i++) {
+//     if (i % 23 == 0) {
+//       console.log(i);
+//       num += i;
+//     }
+//   }
+//   console.log(num);
+// }
+// displayNumberVisible();
 
-//1 //2 //3 //4 //5
+// function displayNumberVisible(divisor) {
+//   let num = 0;
+//   for (let i = 0; i < 500; i++) {
+//     if (divisor != 0 && i % divisor == 0) {
+//       console.log(i);
+//       num += i;
+//     }
+//   }
+//   console.log(num);
+// }
+// displayNumberVisible(50);
+
+//Exercise 2
+
+// const stock = {
+//   banana: 6,
+//   apple: 0,
+//   pear: 12,
+//   orange: 32,
+//   blueberry: 1,
+// };
+
+// const prices = {
+//   banana: 4,
+//   apple: 2,
+//   pear: 1,
+//   orange: 1.5,
+//   blueberry: 10,
+// };
+
+// let shoppingList = ["banana", "apple", "orange"];
+
+// function myBill() {
+//   let totalCost = 0;
+//   for (let i = 0; i < shoppingList.length; i++) {
+//     const fruit = shoppingList[i];
+//     if (stock[fruit] > 0) {
+//       stock[fruit] -= 1;
+//       totalCost += prices[fruit];
+//     }
+//   }
+//   return totalCost;
+// }
+// console.log(myBill());
+// console.log(stock);
+
+// Exercise 3
+
+// function changeEnough(itemPrice, amountOfChange) {
+//   const change = [0.25, 0.1, 0.05, 0.01];
+//   let totalChange = 0;
+//   for (let i = 0; i < amountOfChange.length; i++) {
+//     let coins = amountOfChange[i];
+//     totalChange += coins * change[i];
+//   }
+//   return totalChange >= itemPrice;
+// }
+
+// console.log(changeEnough(4.25, [25, 20, 5, 0]));
+
+// Exercise 4
+
 // function hotelCost() {
-//   let nightNum;
+//   let nights;
 //   do {
 //     let input = prompt("How many nights will you stay?");
-//     nightNum = parseInt(input);
-//   } while (isNaN(nightNum) || nightNum <= 0);
-//   return nightNum * 140;
+//     nights = parseInt(input);
+//   } while (isNaN(nights));
+//   return 140 * nights;
 // }
 
 // function planeRideCost() {
 //   let destination;
 //   do {
-//     destination = prompt("What will be your destination?");
-//   } while (!destination);
-
-//   destination = destination.toLowerCase();
-
-//   if (destination === "paris") {
+//     let input = prompt("Where would you like to fly to?");
+//     destination = input;
+//   } while (!destination || !isNaN(destination));
+//   let pureDestination = destination.toLowerCase().trim();
+//   if (pureDestination == "paris") {
 //     return 220;
-//   } else if (destination === "london") {
+//   } else if (pureDestination == "london") {
 //     return 183;
-//   } else {
-//     return 300;
 //   }
+//   return 300;
 // }
 
 // function rentalCarCost() {
-//   let rentalDays;
+//   let days;
 //   do {
-//     let input = prompt("How many days would you like to rent a car?");
-//     rentalDays = parseInt(input);
-//   } while (isNaN(rentalDays) || rentalDays <= 0);
-
-//   const dailyRate = 40;
-//   const totalCost = rentalDays * dailyRate;
-
-//   if (rentalDays >= 10) {
-//     return totalCost * 0.9;
-//   }
-//   return totalCost;
+//     let input = prompt("For how many days would you like to rent THE car");
+//     days = parseInt(input);
+//   } while (isNaN(days));
+//   let dailyRate = 40;
+//   let totalCost = days * dailyRate;
+//   return days > 10 ? totalCost * 0.9 : totalCost;
 // }
 
 // function totalVacationCost() {
-//   let hotel = hotelCost();
-//   let flight = planeRideCost();
-//   let car = rentalCarCost();
-//   return `Total vacation cost: $${hotel + flight + car}`;
+//   let hotelVCost = hotelCost();
+//   let planeVCost = planeRideCost();
+//   let carVCost = rentalCarCost();
+//   alert(
+//     `The car cost:${carVCost}, the hotel cost: ${hotelVCost}, the plane tickets cost: ${planeVCost}`
+//   );
 // }
 
-// console.log(totalVacationCost());
+// totalVacationCost();
 
-// Exercise 5 : Users
+// Exercise 5
 
-//2
-let thatDiv = document.getElementById("container");
-console.log(thatDiv);
+const myDiv = document.getElementById("container");
+console.log(myDiv);
 
-let lists = document.querySelectorAll(".list li");
-lists[1].innerText = "Richard";
+document
+  .getElementsByClassName("list")[0]
+  .getElementsByTagName("li")[1].textContent = "Richard";
 
-let secondList = document.querySelectorAll(".list")[1];
-secondList.removeChild(secondList.children[1]);
+document
+  .getElementsByClassName("list")[1]
+  .getElementsByTagName("li")[1]
+  .remove();
 
-lists.forEach((li, index) => {
-  if (index % 2 === 0) {
-    li.innerText = "Tom";
-  }
-});
-//3
-document.querySelectorAll(".list ul").forEach((ul) => {
+const myLists = document.getElementsByClassName("list");
+
+for (const ul of myLists) {
+  const firstLi = ul.getElementsByTagName("li")[0];
+  firstLi.textContent = "Tom";
+}
+
+for (const ul of myLists) {
   ul.classList.add("student_list");
-});
+}
 
-document.querySelector(".list").classList.add("university", "attendance");
+myLists[0].classList.add("university", "attendance");
 
-//4
-theDiv = document.querySelector("div");
-theDiv.style.backgroundColor = "lightblue";
-theDiv.style.padding = "2px";
+myDiv.style.backgroundColor = "lightblue";
+myDiv.style.padding = "0.5em";
 
-///couldn't finnish....need i needed sleep...
+document
+  .getElementsByClassName("list")[1]
+  .getElementsByTagName("li")[1].style.display = "none";
+
+document
+  .getElementsByClassName("list")[0]
+  .getElementsByTagName("li")[1].style.border = "1px solid red";
+
+document.body.style.fontSize = "25px";
+
+let tom = document
+  .getElementsByClassName("list")[0]
+  .getElementsByTagName("li")[0].textContent;
+let richard = document
+  .getElementsByClassName("list")[0]
+  .getElementsByTagName("li")[1].textContent;
+myDiv.style.backgroundColor =
+  "lightblue" && alert(`Hello ${tom} and ${richard}`);
