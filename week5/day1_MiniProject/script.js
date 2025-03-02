@@ -38,7 +38,7 @@ predefinedColorContainer.addEventListener("click", function (event) {
   }
 });
 
-for (let i = 0; i < 2000; i++) {
+for (let i = 0; i < 1600; i++) {
   let pixel = document.createElement("div");
   pixel.classList.add("pixel");
   canvas.appendChild(pixel);
@@ -49,7 +49,7 @@ canvas.addEventListener("mouseup", () => (isDrawing = false));
 canvas.addEventListener("mouseleave", () => (isDrawing = false));
 
 canvas.addEventListener("mousemove", function (event) {
-  if (isDrawing && event.target.classList.contains("pixel")) {
+  if (isDrawing && event.target.classList == "pixel") {
     event.target.style.backgroundColor = currentColor;
   }
 });
@@ -58,5 +58,4 @@ clearButton.addEventListener("click", function () {
   document.querySelectorAll(".pixel").forEach((pixel) => {
     pixel.style.backgroundColor = "white";
   });
-  console.log("Canvas cleared!");
 });
