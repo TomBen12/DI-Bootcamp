@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: navy;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+#drumset-container {
+  background-color: antiquewhite; /* to be changed */
+  height: 100px; /* to be changed */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.drum-btns {
+  background-color: black;
+  color: white;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.drum-btns:hover {
+  transform: scale(1.2);
+}
