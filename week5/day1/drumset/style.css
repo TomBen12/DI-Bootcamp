@@ -1,45 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
+  font-family: "Audiowide", cursive;
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: navy;
+  background-image: url(concert.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.249);
+  z-index: -1;
 }
 
 h1 {
-  margin-bottom: 3rem;
+  color: rgba(0, 0, 0, 0.431);
+  -webkit-text-stroke: 2px rgb(0, 238, 255);
+  font-size: 6rem;
+  margin-top: -3em;
+  margin-bottom: 5rem;
 }
 
 #drumset-container {
-  background-color: antiquewhite; /* to be changed */
-  height: 100px; /* to be changed */
+  background-color: rgba(0, 0, 0, 0.579);
+  -webkit-text-stroke: 2px rgb(0, 238, 255);
+  padding: 1rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 3rem;
 }
 
 .drum-btns {
-  background-color: black;
-  color: white;
-  height: 3rem;
-  width: 3rem;
+  background-color: rgba(0, 0, 0, 0.403);
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 2px rgb(0, 238, 255);
+  height: 5.6rem;
+  width: 5.6rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 2px solid rgb(22, 195, 252);
   border-radius: 10px;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.1s step-start;
+  gap: 0.4rem;
 }
-
+.drum-btns:active,
+.active {
+  box-shadow: 2px 2px 6px 6px #0cdbff;
+  transform: scale(1.5);
+}
 .drum-btns:hover {
   transform: scale(1.2);
+}
+
+.key {
+  font-size: 2rem;
+}
+
+.note {
+  font-size: small;
 }
