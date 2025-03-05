@@ -17,18 +17,18 @@
 // const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
 // const ordinal = ["th", "st", "nd", "rd"];
 
-// colors.forEach((color, index) => {
-//   let ord =
-//     index === 0
-//       ? ordinal[1]
-//       : index === 1
-//       ? ordinal[2]
-//       : index === 2
-//       ? ordinal[3]
-//       : ordinal[0];
+colors.forEach((color, index) => {
+  let ord =
+    index === 0
+      ? ordinal[1]
+      : index === 1
+      ? ordinal[2]
+      : index === 2
+      ? ordinal[3]
+      : ordinal[0];
 
-//   console.log(`${index + 1}${ord} choice is ${color}`);
-// });
+  console.log(`${index + 1}${ord} choice is ${color}`);
+});
 
 //Exercise 3
 // // ------1------

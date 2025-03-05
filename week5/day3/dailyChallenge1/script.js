@@ -34,4 +34,3 @@ gameInfo.forEach((user) => user.score > 5 && winners.push(user.username));
 
 //3
 const totalScore = gameInfo.reduce((prev, cur) => prev + cur.score, 0);
-
