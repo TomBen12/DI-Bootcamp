@@ -9,5 +9,3 @@ myForm.addEventListener("submit", (e) => {
   myP.innerText = myJson;
   document.body.appendChild(myP);
 });
-
-
