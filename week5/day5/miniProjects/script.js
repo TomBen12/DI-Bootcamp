@@ -99,6 +99,8 @@ for (let i = 0; i < robots.length; i++) {
   myCardsContainer.appendChild(robotCard);
 }
 
+botSearchForm.addEventListener("submit", (e) => e.preventDefault());
+
 searchBox.addEventListener("input", (e) => {
   const search = e.target.value.toLowerCase();
   const cards = document.getElementsByClassName("robot-card");
