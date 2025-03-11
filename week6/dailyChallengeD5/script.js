@@ -23,3 +23,4 @@ function isAnag(first, second) {
 
   return translate(first) === translate(second);
 }
+

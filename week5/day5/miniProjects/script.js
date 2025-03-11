@@ -110,6 +110,7 @@ searchBox.addEventListener("input", (e) => {
       .querySelector(".robot-info p")
       .textContent.toLowerCase();
 
+      //startWith() could also be use instead for different behavior.
     if (robotName.includes(search)) {
       cards[i].style.display = "flex";
     } else {
