@@ -1,4 +1,4 @@
-const getGif = async () => {
+const getGif = async (tag) => {
   const apiKey = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My";
   try {
     const result = await fetch(
