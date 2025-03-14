@@ -24,7 +24,7 @@ function createGifElement(gifUrl) {
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("delete-button");
   deleteButton.textContent = "Delete!";
-  deleteButton.addEventListener("click", (e) => gifElement.remove());
+  deleteButton.addEventListener("click", () => gifElement.remove());
   gifElement.append(gif, deleteButton);
   document.getElementById("gif-container").appendChild(gifElement);
 }

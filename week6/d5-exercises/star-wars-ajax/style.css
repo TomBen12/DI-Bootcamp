@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+html {
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  background-image: url(space-background.gif);
+  background-size: cover;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  color: rgb(255, 204, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+img {
+  height: 10rem;
+  width: 20rem;
+}
+
+#character-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 28rem;
+  height: 28rem;
+  border: 5px solid rgb(255, 204, 0);
+  font-size: xx-large;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+#spinner {
+  font-size: xx-large;
+  display: none;
+}
+
+#char-btn {
+  border: 3px solid rgb(255, 204, 0);
+  color: rgb(255, 204, 0);
+  height: 2rem;
+  border-radius: 10px;
+  padding: 0.4rem;
+  background-color: transparent;
+  overflow-y: hidden;
+}
