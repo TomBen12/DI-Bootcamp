@@ -78,9 +78,9 @@ function loadingStop() {
 
 charBtn.addEventListener("click", async (e) => {
   const relevantData = await getRandomSWCharaData();
-  nameP.textContent = `Name: ${relevantData.name}`;
-  heightP.textContent = `Height: ${relevantData.height}`;
-  genderP.textContent = `Gender: ${relevantData.gender}`;
-  birthYearP.textContent = `Birth Year: ${relevantData.birth_year}`;
-  homeWorldP.textContent = `Home World: ${relevantData.homeplanet}`;
+  nameP.textContent = `Name - ${relevantData.name}`;
+  heightP.textContent = `Height - ${relevantData.height}cm`;
+  genderP.textContent = `Gender - ${relevantData.gender}`;
+  birthYearP.textContent = `Birth Year - ${relevantData.birth_year}`;
+  homeWorldP.textContent = `Home World - ${relevantData.homeplanet}`;
 });
