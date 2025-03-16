@@ -62,10 +62,11 @@ async function convertAndDisplay() {
   const to = toCurrencySelect.value;
   const amount = amountInput.value;
   const conversion = await requestConvertCurrencies(from, to, amount);
-  result.innerText = `${conversion[0]}-${conversion[1]}`;
+  result.style.display = "block";
+  result.innerText = `${conversion[0]} -- ${conversion[1]}`;
 }
 
-//Event litsners
+//Event listeners
 document.addEventListener("DOMContentLoaded", () => {
   setCurrencies();
 });

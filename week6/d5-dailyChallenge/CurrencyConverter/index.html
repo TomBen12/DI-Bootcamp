@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
     <title>Currency Converter</title>
@@ -16,7 +23,13 @@
         <label for="to-currency">To: </label>
         <select name="to-currency" id="to-currency"></select>
         <label for="amount">Ammount: </label>
-        <input name="amount" type="text" id="amount" required />
+        <input
+          name="amount"
+          type="text"
+          id="amount"
+          pattern="^\d*\.?\d+$"
+          required
+        />
         <button id="convert-button">Convert!</button>
       </form>
       <p id="result"></p>
