@@ -1,17 +1,16 @@
 const express = require("express");
-const cors = require("cors")
+const cors = require("cors");
 
 const app = express();
 
 const PORT = 5001;
 
 app.use(express.json());
-app.use(cors());    
+app.use(cors());
 
 app.listen(PORT, () => {
   console.log("server running on port" + PORT);
 });
-
 const emojis = [
   { emoji: "🎉", name: "Party Popper" },
   { emoji: "🚀", name: "Rocket" },
@@ -74,5 +73,3 @@ app.post("/api/answer", (req, res) => {
     message: isCorrect ? "Correct!" : "Wrong!",
   });
 });
-
-

@@ -4,8 +4,7 @@ async function loadQuestion() {
   const response = await fetch(`${API_URL}/api/question`);
   const data = await response.json();
 
-  document.getElementById("question").innerText = "Which emoji is this?";
-  document.getElementById("emoji").innerText = data.question.split('"')[1];
+  document.getElementById("question").innerText = data.question;
   document.getElementById("feedback").innerText = "";
 
   const optionsContainer = document.getElementById("options");
@@ -14,11 +13,12 @@ async function loadQuestion() {
   data.options.forEach((option) => {
     const button = document.createElement("button");
     button.innerText = option;
-    button.onclick = () => submitAnswer(option, data.correctAnswer);
+    button.addEventListener("click", () => {
+      submitAnswer(option, data.correctAnswer);
+    });
     optionsContainer.appendChild(button);
   });
 }
-
 async function submitAnswer(guess, correctAnswer) {
   const response = await fetch(`${API_URL}/api/answer`, {
     method: "POST",
