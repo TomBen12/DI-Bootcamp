@@ -16,11 +16,11 @@ const validateAnswer = (req, res, next) => {
 
   if (answer === currentQuestion.answer) {
     playerScore.score++;
-    res.locals.feedback = {
+    res.locals = {
       message: "Correct!",
     };
   } else {
-    res.locals.feedback = {
+    res.locals = {
       message: `Wrong!".`,
     };
   }

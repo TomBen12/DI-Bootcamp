@@ -35,7 +35,6 @@ const questions = [
     answer: "7",
   },
 ];
-
 const playerScore = { score: 0, currentQIndex: 0 };
 
 export { questions, playerScore };

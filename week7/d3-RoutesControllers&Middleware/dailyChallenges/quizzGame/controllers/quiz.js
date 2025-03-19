@@ -7,18 +7,20 @@ const startQuiz = (req, res) => {
   res.json({
     message: "Quiz Start!",
     question: currentQuestion.question,
+    options: currentQuestion.options,
   });
 };
 
 const sendQuizResponse = (req, res) => {
   if (playerScore.currentQIndex < questions.length) {
     res.json({
-      ...res.locals.feedback,
+      ...res.locals,
       nextQuestion: questions[playerScore.currentQIndex].question,
+      options: questions[playerScore.currentQIndex].options,
     });
   } else {
     res.json({
-      ...res.locals.feedback,
+      ...res.locals,
       message: "Quiz completed! Check your score at /quizzapi/score",
     });
   }
