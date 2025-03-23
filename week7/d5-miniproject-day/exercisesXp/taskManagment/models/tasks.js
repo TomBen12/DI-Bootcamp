@@ -3,7 +3,6 @@ const {
   readJsonFile,
   writeOnJsonFile,
   appendToJsonFile,
-  sortById,
 } = require("../utils/utils");
 const path = require("path");
 
@@ -51,7 +50,6 @@ const updateTaskByID = async (id, patchData) => {
     const task = tasks.find((task) => task.id == id);
     if (!task) throw new Error("task not found");
     Object.assign(task, patchData);
-    sortById(tasks);
     await writeOnJsonFile(TASKSPATH, tasks);
     return task;
   } catch (error) {
@@ -66,7 +64,6 @@ const removeTaskByID = async (id) => {
     const taskIndex = tasks.findIndex((task) => task.id == id);
     if (taskIndex === -1) throw new Error("task not found");
     const [deletedTask] = tasks.splice(taskIndex, 1);
-    sortById(tasks);
     await writeOnJsonFile(TASKSPATH, tasks);
     return deletedTask;
   } catch (error) {

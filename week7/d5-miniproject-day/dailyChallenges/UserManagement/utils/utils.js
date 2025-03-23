@@ -5,9 +5,9 @@ const generateId = (array) => {
   return array.length > 0 ? Math.max(...array.map((item) => item.id)) + 1 : 1;
 };
 
-// const sortById = (array) => {
-//   return array.sort((a, b) => a.id - b.id);
-// };
+const sortById = (array) => {
+  return array.sort((a, b) => a.id - b.id);
+};
 
 const readJsonFile = async (path) => {
   try {
@@ -44,4 +44,5 @@ module.exports = {
   appendToJsonFile,
   writeOnJsonFile,
   generateId,
+  sortById,
 };
