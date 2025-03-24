@@ -6,7 +6,7 @@ const {
 } = require("../utils/utils");
 const path = require("path");
 
-//this is needed so the path stays relative to this file
+//this is needed so the path stays absolute to the db + in common js __dirname is defined already not in esm
 const TASKSPATH = path.join(__dirname, "../config/tasks.json");
 
 const getAllTasks = async () => {
@@ -34,7 +34,6 @@ const addNewTask = async (newTask) => {
   try {
     const tasks = await readJsonFile(TASKSPATH);
     const newid = generateId(tasks);
-
     const newTaskWithId = { id: newid, ...newTask };
     await appendToJsonFile(TASKSPATH, newTaskWithId);
     return newTaskWithId;

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "username": "test123",
+    "password": "$2a$10$3/AhcO/TI2Tz8y0.t5aodeaSmMr8aZIFyF2g2eux9fP9J8Q7w3gkG",
+    "email": "somethin@doemail.com",
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "id": 2,
+    "username": "tom123",
+    "password": "$2b$10$mtJnPjYz9cZAMh2RO.MW3.XhXu1.1CjjGcn76i1h/Hg5UgszmRR0K",
+    "email": "bla@doemail.com",
+    "firstName": "tom",
+    "lastName": "ben"
+  },
+  {
+    "id": 3,
+    "username": "aasd",
+    "password": "$2b$10$Pv.CY5DPOcFq.fz5osdHAOGs9HMhTvvO73B6IRYndJTNV3L9AhH7W",
+    "email": "asd@asd",
+    "firstName": "as",
+    "lastName": "asd"
+  },
+  {
+    "id": 4,
+    "username": "test5",
+    "password": "$2b$10$sOVTjny119HxLl080d0auuxxLEyJzY9I1Fek/KZjRiJ2VQDwaJSgy",
+    "email": "test5@test.test",
+    "firstName": "tesss",
+    "lastName": "ttt"
+  }
+]

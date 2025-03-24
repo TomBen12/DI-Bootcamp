@@ -3,7 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer async src="register.js"></script>
+    <title>Register</title>
+    <style>
+      #register-form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    </style>
     <title>Register</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <a href="/login.html">Login</a> <a href="/register.html">Register</a>
+    </nav>
+    <div id="container">
+      <form id="register-form">
+        <h3>Register Form</h3>
+
+        <label>Username: <input id="username" type="text" required /></label>
+
+        <label
+          >Password: <input id="password" type="password" required
+        /></label>
+
+        <label>Email: <input id="email" type="email" required /></label>
+
+        <label
+          >First Name: <input id="first-name" type="text" required
+        /></label>
+
+        <label>Last Name: <input id="last-name" type="text" required /></label>
+        <button type="submit">Register</button>
+        <p id="message-box"></p>
+      </form>
+    </div>
+  </body>
 </html>

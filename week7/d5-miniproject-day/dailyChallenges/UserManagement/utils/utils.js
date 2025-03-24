@@ -1,13 +1,34 @@
-const { readFile, writeFile } = require("fs/promises");
+import { readFile, writeFile } from "fs/promises";
+import bcrypt from "bcrypt";
 
-//create an id that can't be repeated even when an element is deleated.
 const generateId = (array) => {
   return array.length > 0 ? Math.max(...array.map((item) => item.id)) + 1 : 1;
 };
 
-const sortById = (array) => {
-  return array.sort((a, b) => a.id - b.id);
-};
+// const sortById = (array) => {
+//   return array.sort((a, b) => a.id - b.id);
+// };
+
+async function hashPassword(password) {
+  try {
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+    return hashedPassword;
+  } catch (error) {
+    console.error("error while hashing password", error.message);
+    throw error;
+  }
+}
+
+async function comparePasswords(plainPassword, hashedPassword) {
+  try {
+    const isMatch = await bcrypt.compare(plainPassword, hashedPassword);
+    return isMatch;
+  } catch (error) {
+    console.error("error while comparing password", error.message);
+    throw error;
+  }
+}
 
 const readJsonFile = async (path) => {
   try {
@@ -39,10 +60,11 @@ const appendToJsonFile = async (path, newObject) => {
   }
 };
 
-module.exports = {
+export {
+  generateId,
+  hashPassword,
+  comparePasswords,
   readJsonFile,
   appendToJsonFile,
   writeOnJsonFile,
-  generateId,
-  sortById,
 };

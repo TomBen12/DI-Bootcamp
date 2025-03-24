@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer async src="login.js"></script>
     <title>Login</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      #login-form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      #message-box {
+        display: none;
+      }
+    </style>
+    <title>Login</title>
+  </head>
+  <nav>
+    <a href="/login.html">Login</a> <a href="/register.html">Register</a>
+  </nav>
+  <body>
+    <div id="container">
+      <form id="login-form">
+        <h3>Login Form</h3>
+        <label>Username: <input id="username" type="text" required /></label>
+        <label
+          >Password: <input id="password" type="password" required
+        /></label>
+        <button type="submit">Login</button>
+        <p id="message-box"></p>
+      </form>
+    </div>
+  </body>
 </html>
