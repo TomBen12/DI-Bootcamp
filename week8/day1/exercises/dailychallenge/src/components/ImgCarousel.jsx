@@ -24,4 +24,4 @@ const ImgCarousel = () => {
   );
 };
 
-export default ImageCarousel;
+export default ImgCarousel;
