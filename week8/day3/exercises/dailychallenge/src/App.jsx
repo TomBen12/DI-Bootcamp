@@ -21,30 +21,11 @@ function App() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const queryParams = new URLSearchParams();
-    for (const key in formData) {
-      if (typeof formData[key] === "boolean") {
-        if (formData[key]) {
-          queryParams.append(key, true);
-        }
-      } else {
-        queryParams.append(key, formData[key]);
-      }
-    }
-
-    // Redirect to the URL with query params
-    window.location.href = `/?${queryParams.toString()}`;
-  };
-
   return (
     <>
       <FormComponent
         handleChange={handleChange}
         formData={formData}
-        handleSubmit={handleSubmit}
       />
     </>
   );
