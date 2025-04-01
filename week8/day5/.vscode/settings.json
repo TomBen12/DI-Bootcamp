@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "[!e]*/**": true,
+    "e[!x]*/**": true,
+    "ex[!e]*/**": true,
+    "exe[!r]*/**": true,
+    "exer[!c]*/**": true,
+    "exerc[!i]*/**": true,
+    "exerci[!s]*/**": true,
+    "exercis[!e]*/**": true,
+    "exercise[!s]*/**": true
+  }
+}
