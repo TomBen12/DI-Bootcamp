@@ -43,6 +43,7 @@ const QuoteBox = () => {
         padding: "2rem",
         borderRadius: "10px",
         color: "#333",
+        minHeight: "6rem",
       }}
     >
       <h2>
