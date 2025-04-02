@@ -7,6 +7,27 @@ import Shop from "./components/Shop";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
+  const PostToWebHook = async () => {
+    const URL = "https://webhook.site/22d7e6f0-9b89-4863-84e4-87ead8fdac74";
+    const User1 = {
+      key1: "myusername",
+      email: "mymail@gmail.com",
+      name: "Isaac",
+      lastname: "Doe",
+      age: 27,
+    };
+
+    const response = await fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        JSON,
+      },
+      body: JSON.stringify(User1),
+    });
+    console.log(response);
+  };
+
   return (
     <>
       <Nav variant="pills" defaultActiveKey="/">
@@ -20,7 +41,9 @@ function App() {
           Shop
         </Nav.Link>
       </Nav>
-      
+
+      <button onClick={PostToWebHook}>Post User1 To webhook</button>
+
       <Routes>
         <Route
           path="/"
@@ -38,7 +61,14 @@ function App() {
             </ErrorBoundary>
           }
         />
-        <Route path="/shop" element={<ErrorBoundary><Shop /></ErrorBoundary>} />
+        <Route
+          path="/shop"
+          element={
+            <ErrorBoundary>
+              <Shop />
+            </ErrorBoundary>
+          }
+        />
       </Routes>
     </>
   );
