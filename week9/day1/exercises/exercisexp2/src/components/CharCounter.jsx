@@ -4,6 +4,8 @@ const CharCounter = () => {
   const [length, setLength] = useState(0);
   const inputRef = useRef(null);
 
+  setLength((prev)=>{ prev + 1})
+
   const handleChange = () => {
     const inputValLength = inputRef.current.value.length;
     setLength(inputValLength);
