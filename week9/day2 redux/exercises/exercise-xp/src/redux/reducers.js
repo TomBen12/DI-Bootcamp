@@ -6,7 +6,7 @@ const initialState = {
 };
 
 // {
-//   id: 1,
+//   id: 123456,
 //   taskName: "Learn Redux",
 //   completed: false
 // }
