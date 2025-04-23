@@ -39,7 +39,7 @@ class Library {
 
 class DigitalLibrary extends Library {
   readonly website: string;
-  constructor(website: string = "library", books: Book[] = []) {
+  constructor(website: string, books: Book[] = []) {
     super(books);
     this.website = website;
   }
